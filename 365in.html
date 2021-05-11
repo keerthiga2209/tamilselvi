@@ -1,0 +1,618 @@
+<html>
+
+  <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>365 Entertainment Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://internship.suvenconsultants.com/projects/365webproject/365epimages/365ep.jpg" type="image/png" sizes="16x20">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+   ]
+    <link rel="stylesheet" type="text/css" href="365ep.css">
+<style>
+  * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  background-color: white;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  background-color: black;
+}
+
+.container {
+  position: relative;
+  height: auto;
+}
+
+header {
+  height: 80px;
+}
+
+header,
+footer {
+  background: linear-gradient(-45deg, rgb(223, 245, 253), rgb(255, 240, 107), rgb(206, 255, 250), rgb(218, 165, 32));
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 20s ease infinite;
+  -moz-animation: Gradient 20s ease infinite;
+  animation: Gradient 20s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+header .bar {
+  width: fit-content;
+  height: 80px;
+  margin: -100px;
+  background: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+
+.navigation {
+  position: relative;
+  padding-bottom: 16px;
+  z-index: 2;
+  /* position: fixed; */
+}
+
+.navigation,
+.copyright {
+  overflow: hidden;
+}
+
+.navigation .logo {
+  width: 80px;
+  height: 50px;
+  float: left;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navigation .links,
+.copyright .links {
+  display: block;
+  font-size: 17px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  text-align: center;
+  margin: 16px 25px 0px 25px;
+  float: left;
+}
+
+.navigation .text {
+  margin: 32px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold
+}
+
+.navigation a.text:hover,
+.copyright a.text:hover {
+  color: #3f3f3f;
+  border-bottom: none;
+  opacity: 0.5;
+}
+
+.navigation a.active,
+.copyright a:active {
+  color: white;
+  font-size: 20px;
+}
+
+.navigation input[type=text],
+.copyright input[type=text] {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+} //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.search-container {
+  float: right;
+  padding: 16px 0px 16px 16px;
+  margin: 0px 25px 0px 25px;
+}
+
+.search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: none;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  /* background: #b5bbfd; */
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.fa-search:before {
+  color: rgb(0, 0, 0);
+  border: none;
+  outline: none;
+}
+
+.fa-search:active {
+  border: none;
+  outline: none;
+  border: 0;
+  outline: 0 !important;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.slides {
+  display: none;
+}
+
+.slides img {
+  vertical-align: middle;
+  width: 100%;
+  height: 526px;
+}
+
+/* Slideshow container */
+
+.slideshow-container {
+  max-width: 1350px;
+  position: relative;
+}
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+
+.prev:hover,
+.next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.body-content {
+  margin: 40px;
+}
+
+.dropdown-container {
+  margin: 40px 0px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown #dropbtn {
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  padding: 5px 42px;
+  margin: 20px 5px 5px 20px;
+  width: 160px;
+  background-color: #11121b;
+  color: white;
+  text-align: left;
+}
+
+.fa {
+  float: right;
+}
+
+.navbar a:hover,
+.dropdown:hover #dropbtn,
+#dropbtn:focus {
+  background-color: red;
+}
+
+#dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+#dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+#media-carousel-container {
+  margin: 10px 40px 40px 40px;
+}
+
+#media-holder-action,
+#media-holder-drama,
+#media-holder-scifi {
+  clear: both;
+}
+
+.popular-heading {
+  border-bottom: 1px solid white;
+  margin-top: 50px;
+}
+
+#image-container-action,
+#image-container-drama,
+#image-container-scifi {
+  height: 250px;
+}
+
+.media-carousel,
+.media-carousel-movies {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 10px 5px;
+  float: left;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  /* Fallback color */
+  background: rgba(0, 0, 0, 0.5);
+  /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  text-align: center;
+}
+
+#no-results {
+  display: none;
+  text-align: center;
+}
+
+footer {
+  height: 76px;
+  /* bottom: 0px; */
+  width: 100%;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.copyright {
+  position: relative;
+  padding: 0px 0px 20px 0px;
+  z-index: 2;
+  margin-top: -20px;
+}
+
+.copyright .links {
+  margin-left: 25px;
+}
+
+.copyright .text {
+  margin-top: 28px;
+  color: rgb(63, 63, 63);
+}
+
+.copyright .logo {
+  width: 62px;
+  height: 40px;
+  float: left;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+form {
+  float: right;
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+    </style>
+  </head>i
+
+  <body>
+
+    <div class="container">
+
+      <header>
+
+        <div class="navigation">
+
+          <a class="links" href=""><img class="logo" src="365epimages/365ep.jpg" alt="365 Entertainment Portal"/></a>
+          <a class="links text" href="movies.html">Movies</a>
+          <a class="links text" href="#tv_series">TV Series</a>
+          <a class="links text" href="#audio">Audio</a>
+
+
+
+        </div>
+
+        <div class="bar"></div>
+
+      </header>
+
+
+      <div class="content">
+
+        <div class="head-content">
+
+          <div class="slideshow-container">
+            <div class="slides">
+              <img src="365epimages/abc1.jpg" alt="hero carousel">
+            </div>
+
+            <div class="slides">
+              <img src="365epimages/abc2.jpg" alt="hero carousel">
+            </div>
+
+            <div class="slides">
+              <img src="365epimages/abc3.jpg" alt="hero carousel">
+            </div>
+
+            <div class="slides">
+              <img src="365epimages/abc4.jpg" alt="hero carousel">
+            </div>
+
+            <div class="slides">
+              <img src="365epimages/abc5.jpg" alt="hero carousel">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+          </div>
+
+        </div>
+
+
+
+
+        <div id="media-carousel-container">
+
+          <div id="media-holder-action">
+            <div class="popular-heading">
+              <h2>Popular in Action</h2>
+            </div>
+
+            <div id="image-container-action">
+              <div class="media-carousel">
+                <img src="365epimages/oop1.jpg" alt="hero carousel" width=200 height=200 />
+                <div class="overlay"><b>Last City</b><br/>Thriller, Mystery & Comedy.</div>
+              </div>
+              <div class="media-carousel">
+                <img src="365epimages/oop2.jpg" alt="hero carousel" width=200 height=200 />
+                <div class="overlay"><b>Tomb Raider</b><br/>Indian crime tragedy film.</div>
+              </div>
+              <div class="media-carousel">
+                <img src="365epimages/oop3.jpg" alt="hero carousel" width=200 height=200 />
+                <div class="overlay"><b>Japanese Marvel</b><br/>A Marvel Comics superhero team.</div>
+              </div>
+              <div class="media-carousel">
+                <img src="365epimages/oop4.jpg" alt="hero carousel" width=200 height=200 />
+                <div class="overlay"><b>Bohemian</b><br/>Japanese manga series written by Tsugumi.</div>
+              </div>
+              <div class="media-carousel">
+                <img src="365epimages/oop5.jpg" alt="hero carousel" width=200 height=200 />
+                <div class="overlay"><b>Justice League</b><br/>2003 American martial arts film.</div>
+              </div>
+              <div class="media-carousel">
+                <img src="365epimages/oop6.jpg" alt="hero carousel" width=200 height=200 />
+                <div class="overlay"><b>Borgia</b><br/>Indian action drama film.</div>
+              </div>
+            </div>
+          </div>
+
+
+          <div id="media-holder-drama">
+            <div class="popular-heading">
+              <h2>Popular in Drama</h2>
+            </div>
+            <div id="image-container-drama">
+              <div class="media-carousel">
+                <img src="365epimages/oop7.jpg" alt="hero carousel" width=200 height=200 />
+                <div class="overlay"><b>The Nun</b><br/>2016 ‧ Fantasy/Science Fiction.</div>
+              </div>
+              <div class="media-carousel">
+                <img src="365epimages/oop8.jpg" alt="hero carousel" width=200 height=200 />
+                <div class="overlay"><b>Avengers</b><br/>Indian crime tragedy film.</div>
+              </div>
+              <div class="media-carousel">
+                <img src="365epimages/oop9.jpg" alt="hero carousel" width=200 height=200 />
+                <div class="overlay"><b>Aquaman</b><br/>Thriller, Mystery & Comedy.</div>
+              </div>
+              <div class="media-carousel">
+                <img src="365epimages/oop10.jpg" alt="hero carousel" width=200 height=200 />
+                <div class="overlay"><b>TOmb Raider</b><br/>A Marvel Comics superhero team.</div>
+              </div>
+              <div class="media-carousel">
+                <img src="365epimages/oop11.jpg" alt="hero carousel" width=200 height=200 />
+                <div class="overlay"><b>FIGHTCLUB</b><br/>American martial arts film.</div>
+              </div>
+              <div class="media-carousel">
+                <img src="365epimages/oop12.jpg" alt="hero carousel" width=200 height=200 />
+                <div class="overlay"><b>Myaoekai</b><br/>Indian crime tragedy film.</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="media-holder-scifi">
+            <div class="popular-heading">
+              <h2>Popular in Sci-Fi</h2>
+            </div>
+            <div id="image-container-scifi">
+              <div class="media-carousel">
+                <img src="365epimages/oop13.jpg" alt="hero carousel" width=200 height=200 />
+                <div class="overlay"><b>Red Wars</b><br/>Chinese crime thriller.</div>
+              </div>
+              <div class="media-carousel">
+                <img src="365epimages/oop14.jpg" alt="hero carousel" width=200 height=200 />
+                <div class="overlay"><b>Florida</b><br/>Documentary eastern eravel.</div>
+              </div>
+              <div class="media-carousel">
+                <img src="365epimages/oop15.jpg" alt="hero carousel" width=200 height=200 />
+                <div class="overlay"><b>That Thing</b><br/>Thriller Romance Drama film.</div>
+              </div>
+              <div class="media-carousel">
+                <img src="365epimages/oop16.jpg" alt="hero carousel" width=200 height=200 />
+                <div class="overlay"><b>First Five</b><br/>South Korean Entertainment.</div>
+              </div>
+              <div class="media-carousel">
+                <img src="365epimages/oop17.jpg" alt="hero carousel" width=200 height=200 />
+                <div class="overlay"><b>Shrooms</b><br/>A Marvel Comics superhero team.</div>
+              </div>
+              <div class="media-carousel">
+                <img src="365epimages/oop18.jpg" alt="hero carousel" width=200 height=200 />
+                <div class="overlay"><b>Superman</b><br/>Indian comedy & Romance.</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <footer>
+
+        <div class="copyright">
+          <a class="links" href="index.html"><img class="logo" src="365epimages/365ep.jpg" alt="365 Entertainment Portal"/></a>
+          <div class="text">Powered by 365 Entertainment Portal 2019. All Rights Reserved.</div>
+        </div>
+
+      </footer>
+
+    </div>
+
+
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+          $("body").on("contextmenu",function(e){
+              return false;
+          });
+      });
+    </script>
+  </body>
+
+</html>
