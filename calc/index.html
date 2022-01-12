@@ -20,9 +20,53 @@
     </head>
     <body>
         <h1>calculator app</h1>
-        <div id="numbers"><button>7</button><button>8</button><button>9</button></div>
-        <div id="numbers"><button>4</button><button>5</button><button>6</button></div>
-        <div id="numbers"><button>1</button><button>2</button><button>3</button></div>
+        
+        <h1 id="ans"></h1>
+        <div id="numbers"><button onclick="seven()">7</button><button onclick="eight()">8</button><button onclick="nine()">9</button></div>
+        <div id="numbers"><button onclick="four()">4</button><button onclick="five()">5</button><button onclick="six()">6</button></div>
+        <div id="numbers"><button onclick="one()">1</button><button onclick="two()">2</button><button onclick="three()">3</button></div>
+        <script>
+            let x=0;
+            function one()
+            {
+                    x=1;
+                    
+                    document.getElementById("ans").innerHTML=x;
+            }
+            function two(){
+                x=2;
+                document.getElementById("ans").innerHTML=x;
+                
+            }
+            function three(){
+                x=3;
+                document.getElementById("ans").innerHTML=x;
+            }
+            function four(){
+                x=4;
+                document.getElementById("ans").innerHTML=x;
+            }
+            function five(){
+                x=5;
+                document.getElementById("ans").innerHTML=x;
+            }
+            function six(){
+                x=6;
+                document.getElementById("ans").innerHTML=x;
+            }
+            function seven(){
+                x=7;
+                document.getElementById("ans").innerHTML=x;
+            }
+            function eight(){
+                x=8;
+                document.getElementById("ans").innerHTML=x;
+            }
+            function nine(){
+                x=9;
+                document.getElementById("ans").innerHTML=x;
+            }
+            </script>
     </body>
     
 </html>
